@@ -24,6 +24,18 @@
           sha256 = "sha256-qqF33vNuAdU5vua96VKVIwuc43j4EFeEXbjQ6+l4mO4=";
         };
         craneLib = (crane.mkLib pkgs).overrideToolchain rust-toolchain;
+
+        # make source out of html and cargo files
+        src = let
+          htmlFilter = path: _type: builtins.match ".*html$" path != null;
+          htmlOrCargo = path: type:
+            (htmlFilter path type) || (craneLib.filterCargoSources path type);
+        in
+          pkgs.lib.cleanSourceWith {
+            src = ./.; # The original, unfiltered source
+            filter = htmlOrCargo;
+            name = "source"; # Be reproducible, regardless of the directory name
+          };
       in {
         devShells.default = pkgs.mkShell {
           nativeBuildInputs = with pkgs; [
@@ -40,18 +52,16 @@
         };
         # site generator
         packages.generator = craneLib.buildPackage {
-          # make source out of html and cargo files
-          src = let
-            htmlFilter = path: _type: builtins.match ".*html$" path != null;
-            htmlOrCargo = path: type:
-              (htmlFilter path type) || (craneLib.filterCargoSources path type);
-          in
-            pkgs.lib.cleanSourceWith {
-              src = ./.; # The original, unfiltered source
-              filter = htmlOrCargo;
-              name = "source"; # Be reproducible, regardless of the directory name
-            };
+          inherit src;
+
           cargoArtifacts = self.packages.${system}.cargoArtifacts;
+        };
+        checks.generator = craneLib.cargoClippy {
+          inherit src;
+
+          cargoArtifacts = self.packages.${system}.cargoArtifacts;
+
+          cargoClippyExtraArgs = "-- --deny warnings";
         };
         # site files
         packages.default = pkgs.stdenv.mkDerivation {
