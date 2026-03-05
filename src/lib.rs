@@ -4,7 +4,7 @@ use sycamore::prelude::*;
 fn App() -> View {
     view! {
         div {
-            h1(class="text-2xl font-medium") { "Hello, world!" }
+            h1(class="text-3xl font-bold underline") { "Hello, world!" }
             p { "This is my first Sycamore app" }
         }
     }
