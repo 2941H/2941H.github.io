@@ -56,6 +56,7 @@
 
           cargoArtifacts = self.packages.${system}.cargoArtifacts;
         };
+        # clippy check
         checks.generator = craneLib.cargoClippy {
           inherit src;
 
@@ -64,7 +65,7 @@
           cargoClippyExtraArgs = "-- --deny warnings";
         };
         # site files
-        packages.default = pkgs.stdenv.mkDerivation {
+        packages.page = pkgs.stdenv.mkDerivation {
           name = "page";
           version = self.packages.${system}.generator.version;
 
@@ -79,6 +80,22 @@
 
             # generate tailwind css
             ${pkgs.tailwindcss_4}/bin/tailwindcss --output $out/tailwind.css --cwd $out --minify
+          '';
+        };
+        packages.default = self.packages.${system}.page;
+        # validator nu check
+        checks.vnu = pkgs.stdenv.mkDerivation {
+          name = "validator-nu-check";
+          src = self.packages.${system}.page;
+
+          nativeBuildInputs = with pkgs; [
+            validator-nu
+          ];
+
+          buildPhase = ''
+            vnu $src/index.html
+
+            mkdir -p $out
           '';
         };
         # open page in browser
