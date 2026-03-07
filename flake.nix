@@ -72,14 +72,21 @@
           # no src
           dontUnpack = true;
 
+          assets = ./assets;
+
           buildPhase = ''
             mkdir -p $out
+
+            # copy assets
+            mkdir -p $out/assets
+            cp $assets/* $out/assets
 
             # generate site
             ${self.packages.${system}.generator}/bin/page > $out/index.html
 
             # generate tailwind css
-            ${pkgs.tailwindcss_4}/bin/tailwindcss --output $out/tailwind.css --cwd $out --minify
+            ${pkgs.tailwindcss_4}/bin/tailwindcss --input $out/assets/input.css --output $out/tailwind.css --cwd $out --minify
+            rm $out/assets/input.css # not needed anymore
           '';
         };
         packages.default = self.packages.${system}.page;
