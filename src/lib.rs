@@ -25,7 +25,7 @@ fn App() -> View {
                     span { "d" }
                 }
             }
-            r#box::Box(class="absolute right-0 top-1/2 -translate-y-1/2 rounded-tr-none rounded-br-none w-1/5 text-justify") {
+            r#box::Box(class="absolute right-0 top-1/2 -translate-y-1/2 rounded-tr-none rounded-br-none w-1/5 text-justify text-white") {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu felis venenatis, pretium enim id, placerat ipsum. Duis quam tortor, commodo quis blandit in, accumsan eget libero. Donec rhoncus lobortis mauris, vel pulvinar lacus. Etiam posuere odio non cursus ultricies. Nunc rutrum rutrum felis, eget cursus leo pretium id. Nulla ornare nulla odio, nec sodales tortor rhoncus ut. Vestibulum suscipit est mauris, ac bibendum diam facilisis id. Cras tempus enim at libero auctor hendrerit. Nulla ornare molestie pulvinar."
             }
         }
