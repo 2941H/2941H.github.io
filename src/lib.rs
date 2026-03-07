@@ -6,7 +6,7 @@ mod r#box;
 fn App() -> View {
     view! {
         section(class="h-screen w-full") {
-            img(src="./assets/robot_edited.webp", class="absolute top-0 left-0 w-full h-full object-cover")
+            img(src="./assets/robot_edited.webp", class="absolute top-0 left-0 w-full h-full object-cover", alt="Team 2941H VEX robot on the field.")
             r#box::Box(class="absolute top-0 left-0 rounded-tl-none rounded-tr-none rounded-bl-none") {
                 h1(class="text-9xl font-mono text-white") {
                     span {"2941H"}
