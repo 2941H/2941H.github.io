@@ -2,6 +2,7 @@ use sycamore::prelude::*;
 
 mod about;
 mod r#box;
+mod operation;
 mod profile_card;
 mod section;
 mod title;
@@ -14,6 +15,7 @@ fn App() -> View {
             title::Title()
             vex::Vex()
             about::About()
+            operation::Operation()
         }
     }
 }
