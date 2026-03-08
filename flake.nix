@@ -95,6 +95,7 @@
           dontUnpack = true;
 
           assets = ./assets;
+          tailwind_input = ./assets_source/input.css;
 
           buildPhase = ''
             mkdir -p $out
@@ -111,8 +112,7 @@
             ${self.packages.${system}.generator}/bin/page > $out/index.html
 
             # generate tailwind css
-            ${pkgs.tailwindcss_4}/bin/tailwindcss --input $out/assets/input.css --output $out/tailwind.css --cwd $out --minify
-            rm $out/assets/input.css # not needed anymore
+            ${pkgs.tailwindcss_4}/bin/tailwindcss --input $tailwind_input --output $out/tailwind.css --cwd $out --minify
           '';
         };
         packages.default = self.packages.${system}.page;
