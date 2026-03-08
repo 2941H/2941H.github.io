@@ -10,7 +10,8 @@ pub(crate) fn Vex() -> View {
             r#box::Box(class="lg:absolute w-full lg:w-auto lg:top-0 lg:left-0 lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
                     "What is "
-                    img(src="./assets/vex_robotics_logo.png", class="h-[1.2em] inline")
+                    span(class="sr-only") {"vex robotics"}
+                    img(src="./assets/vex_robotics_logo.png", class="h-[1.2em] inline", alt="", aria-hidden="true")
                     "?"
                 }
             }
