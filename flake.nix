@@ -64,6 +64,28 @@
 
           cargoClippyExtraArgs = "-- --deny warnings";
         };
+        # fonts
+        packages.fonts = pkgs.stdenv.mkDerivation {
+          name = "fonts";
+
+          # no src
+          dontUnpack = true;
+
+          lexend = builtins.fetchurl {
+            url = "https://fonts.gstatic.com/s/lexend/v26/wlpwgwvFAVdoq2_v-6QU.woff2";
+            sha256 = "0x68059x1h18l2bv7xzr71jfh3z79677yqnp84l83wdzb67m7rxp";
+          };
+          hk_grotesk = builtins.fetchurl {
+            url = "https://fonts.gstatic.com/s/hankengrotesk/v12/ieVq2YZDLWuGJpnzaiwFXS9tYvBRzyFLlZg_f_Ncs2Zq5vBM.woff2";
+            sha256 = "0zfqsmr1k5fs4ysikjdlhijn2i0s3njffk71gjp5jvby1gfkyyvq";
+          };
+
+          installPhase = ''
+            mkdir -p $out
+            cp $lexend $out/lexend.woff2
+            cp $hk_grotesk $out/hk-grotesk.woff2
+          '';
+        };
         # site files
         packages.page = pkgs.stdenv.mkDerivation {
           name = "page";
@@ -80,6 +102,10 @@
             # copy assets
             mkdir -p $out/assets
             cp $assets/* $out/assets
+
+            # copy fonts
+            mkdir -p $out/assets/fonts
+            cp ${self.packages.${system}.fonts}/* $out/assets/fonts
 
             # generate site
             ${self.packages.${system}.generator}/bin/page > $out/index.html
