@@ -1,11 +1,11 @@
 [[people]]
 name = "Tom"
-photo = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F004%2F511%2F281%2Foriginal%2Fdefault-avatar-photo-placeholder-profile-picture-vector.jpg&f=1&nofb=1&ipt=3d3fe1367451c731ca2683bef52453d2991e78332c2e455a06a89e1270c25a77"
-quote = "hi blah blah blah I really like worlds"
+photo = "./assets/tom.webp"
+quote = "There are about 14,300 VEX robotics teams globally and for each and every one of them the dream is to compete at the World Championship one day. I competed for 7 years, played over 300 matches, competed with 17 different teammates, all to chase the dream of qualifying for Worlds. In 2019 I started at the bottom of the ladder and every year, I improved bit by bit. In 2022, the core of 2941H formed as we know it today. Over those four years together, we’ve seen the highs and lows: we’ve won trophies and watched tournaments slip through our hands. We took risks in our designs and strategies when other teams wouldn't. Through innovation and sheer determination, we are now one of the top teams in New Zealand and have been for the last 2 years. Unfortunately I am no longer the 11 year old boy I once was and won't be able to go because of university commitments making 2026 nationals my final destination in my career. I've had the honour to lead this team to the top and to the Worlds qualification, to be able to watch them go and complete the dream I’ve chased for so long means more than anything to me."
 
 [[people]]
 name = "Indie"
-photo = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F004%2F511%2F281%2Foriginal%2Fdefault-avatar-photo-placeholder-profile-picture-vector.jpg&f=1&nofb=1&ipt=3d3fe1367451c731ca2683bef52453d2991e78332c2e455a06a89e1270c25a77"
+photo = "./assets/indie.webp"
 quote = "hi blah blah blah I really like worlds"
 
 [[people]]
@@ -15,7 +15,7 @@ quote = "In engineering there's a term called plastic deformation, where a mater
 
 [[people]]
 name = "Rosa"
-photo = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F004%2F511%2F281%2Foriginal%2Fdefault-avatar-photo-placeholder-profile-picture-vector.jpg&f=1&nofb=1&ipt=3d3fe1367451c731ca2683bef52453d2991e78332c2e455a06a89e1270c25a77"
+photo = "./assets/rosa.webp"
 quote = "hi blah blah blah I really like worlds"
 
 [[people]]
