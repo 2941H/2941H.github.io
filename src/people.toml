@@ -10,8 +10,8 @@ quote = "hi blah blah blah I really like worlds"
 
 [[people]]
 name = "Finn"
-photo = "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F004%2F511%2F281%2Foriginal%2Fdefault-avatar-photo-placeholder-profile-picture-vector.jpg&f=1&nofb=1&ipt=3d3fe1367451c731ca2683bef52453d2991e78332c2e455a06a89e1270c25a77"
-quote = "hi blah blah blah I really like worlds"
+photo = "./assets/finn.webp"
+quote = "In engineering there's a term called plastic deformation, where a material is permanently deformed after being stretched past it's limits. Worlds would give me the chance to stretch myself past my limits, and would, regardless of the outcome, leave permanent, positive, changes. There's rarely a case where I can test my abilities to the level that this competition provides. I am very grateful to take part in this exciting opportunity."
 
 [[people]]
 name = "Rosa"

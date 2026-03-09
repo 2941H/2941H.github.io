@@ -9,7 +9,7 @@ pub(crate) struct Person {
 }
 
 #[component(inline_props)]
-pub(crate) fn Profile<'a>(class: Option<&'a str>, person: Person) -> View {
+pub(crate) fn Profile<'a>(person: Person) -> View {
     // quote elements
     let quote = person
         .quote
@@ -23,10 +23,12 @@ pub(crate) fn Profile<'a>(class: Option<&'a str>, person: Person) -> View {
         .unwrap_or_default();
 
     view! {
-        r#box::Box(class=&("flex".to_string() + class.unwrap_or_default())) {
-            figure(class="w-fit h-fit mr-4") {
-                img(src=person.photo, class="rounded-full w-30 h-30 object-cover")
-                figcaption(class="text-xl text-center text-white") {
+        r#box::Box(class="block lg:flex") {
+            figure(class="mb-4 lg:mb-0 lg:mr-4") {
+                div(class="w-50 w-50 rounded-full overflow-hidden mx-auto") {
+                    img(src=person.photo, class="w-full h-full object-cover")
+                }
+                figcaption(class="text-2xl text-center text-white") {
                     (person.name)
                 }
             }
