@@ -15,7 +15,7 @@ pub(crate) fn Vex() -> View {
                     "?"
                 }
             }
-            r#box::Box(class="absolute m-8 bottom-0 lg:m-0 lg:left-8 lg:bottom-8 lg:w-100 text-white text-xl") {
+            r#box::Box(class="absolute m-8 bottom-0 lg:m-0 lg:left-8 lg:bottom-8 lg:w-100 text-justify text-white text-xl") {
                 "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu felis venenatis, pretium enim id, placerat ipsum. Duis quam tortor, commodo quis blandit in, accumsan eget libero. Donec rhoncus lobortis mauris, vel pulvinar lacus. Etiam posuere odio non cursus ultricies. Nunc rutrum rutrum felis, eget cursus leo pretium id. Nulla ornare nulla odio, nec sodales tortor rhoncus ut. Vestibulum suscipit est mauris, ac bibendum diam facilisis id."
             }
         }
