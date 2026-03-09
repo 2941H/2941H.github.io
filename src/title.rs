@@ -25,7 +25,8 @@ pub(crate) fn Title() -> View {
                 }
             }
             r#box::Box(class="lg:z-1 m-8 lg:m-0 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2  lg:rounded-tr-none lg:rounded-br-none lg:w-3/10 text-justify text-white text-xl") {
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu felis venenatis, pretium enim id, placerat ipsum. Duis quam tortor, commodo quis blandit in, accumsan eget libero. Donec rhoncus lobortis mauris, vel pulvinar lacus. Etiam posuere odio non cursus ultricies. Nunc rutrum rutrum felis, eget cursus leo pretium id. Nulla ornare nulla odio, nec sodales tortor rhoncus ut. Vestibulum suscipit est mauris, ac bibendum diam facilisis id."
+                // this is toml because of nix source filtering reasons
+                (include_str!("team_overview.toml"))
             }
             img(src="./assets/robot_edited.webp", class="h-screen snap-start object-center  lg:translate-x-0 lg:snap-align-none lg:absolute inset-0 lg:h-full lg:w-full lg:object-right object-cover", alt="Team 2941H VEX robot on the field.")
         }
