@@ -7,7 +7,7 @@ pub(crate) fn Vex() -> View {
     view! {
         section::Section(breakpoint="lg") {
             img(src="./assets/nationals.webp", class="w-auto absolute inset-0 h-full w-full object-center object-cover", alt="Placeholder image.")
-            r#box::Box(class="bg-white/30 lg:absolute w-full lg:w-auto lg:top-0 lg:left-0 lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
+            r#box::Box(class="bg-gray-900/50! lg:absolute w-full lg:w-auto lg:top-0 lg:left-0 lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
                     "What is "
                     span(class="sr-only") {"vex robotics"}

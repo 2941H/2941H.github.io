@@ -11,7 +11,7 @@ pub(crate) fn Operation() -> View {
                     "Design Process"
                 }
             }
-            r#box::Box(class="ml-auto w-fit h-fit rounded-tl-none rounded-tr-none rounded-br-none") {
+            r#box::Box(class="my-8 mx-auto lg:m-0 lg:ml-auto w-fit h-fit lg:rounded-tl-none lg:rounded-tr-none lg:rounded-br-none text-white") {
                 h2(class="text-3xl") {"Our Engineering Notebook"}
                 iframe(src="./assets/notebook.pdf", class="w-90 aspect-210/297", title="engineering notebook")
             }
