@@ -5,7 +5,7 @@ use sycamore::prelude::*;
 #[component]
 pub(crate) fn Vex() -> View {
     view! {
-        section::Section {
+        section::Section(breakpoint="lg") {
             img(src="./assets/nationals.webp", class="w-auto absolute inset-0 h-full w-full object-center object-cover", alt="Placeholder image.")
             r#box::Box(class="bg-white/30 lg:absolute w-full lg:w-auto lg:top-0 lg:left-0 lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
@@ -15,8 +15,9 @@ pub(crate) fn Vex() -> View {
                     "?"
                 }
             }
-            r#box::Box(class="absolute m-8 bottom-0 lg:m-0 lg:left-8 lg:bottom-8 lg:w-100 text-justify text-white text-xl") {
-                "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam eu felis venenatis, pretium enim id, placerat ipsum. Duis quam tortor, commodo quis blandit in, accumsan eget libero. Donec rhoncus lobortis mauris, vel pulvinar lacus. Etiam posuere odio non cursus ultricies. Nunc rutrum rutrum felis, eget cursus leo pretium id. Nulla ornare nulla odio, nec sodales tortor rhoncus ut. Vestibulum suscipit est mauris, ac bibendum diam facilisis id."
+            r#box::Box(class="lg:absolute m-8 lg:bottom-0 text-justify text-white text-xl") {
+                p {"The VEX V5 Robotics Competition (VRC) is one of the world's largest and most prestigious competitive robotics programs for secondary schools. VRC engages millions of students across 60+ countries, making it a truly global STEM initiative. The competition challenges student teams to design, build, program, and drive robots to compete in annual game challenges."}
+                p {"Each VEX Robotics season features a unique game challenge that is revealed globally at the start of the competition year. Matches are played on a 12-foot by 12-foot field, with two alliances (red and blue) competing against each other, each alliance consisting of two teams working collaboratively. Every match is divided into two distinct periods: a 15-second autonomous period where robots operate entirely on pre-programmed code without any driver input, followed by a 1-minute 45-second driver-controlled period where students operate their robots using handheld controllers. Points are scored through various game-specific tasks, which typically involve manipulating game objects such as balls, rings, cubes, or other elements into goals, zones, or stacking configurations. Additional points can be earned through autonomous bonuses and end-game objectives. Robots must adhere to strict size constraints (typically an 18-inch cube at the start of the match) and can only be built using official VEX V5 components."}
             }
         }
     }
