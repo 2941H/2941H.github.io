@@ -11,7 +11,7 @@ pub(crate) fn Operation() -> View {
                     "Design Process"
                 }
             }
-            r#box::Box(class="my-8 mx-auto lg:m-0 lg:ml-auto w-svw sm:w-90 h-fit lg:rounded-tl-none lg:rounded-tr-none lg:rounded-br-none text-white") {
+            r#box::Box(class="my-8 mx-auto lg:m-0 lg:ml-auto w-svw sm:w-90 h-fit rounded-tl-none rounded-tr-none rounded-br-none rounded-bl-none sm:rounded-tr-lg sm:rounded-br-lg sm:rounded-bl-lg sm:rounded-tl-lg lg:rounded-br-none lg:rounded-tr-none lg:rounded-tl-none lg:rounded-bl-lg text-white") {
                 h2(class="text-3xl text-center") {"Our Engineering Notebook"}
                 iframe(src="./assets/notebook.pdf", class="w-full aspect-210/297", title="engineering notebook")
             }
