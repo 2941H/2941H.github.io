@@ -28,7 +28,8 @@ pub(crate) fn Title() -> View {
                 // this is toml because of nix source filtering reasons
                 (include_str!("team_overview.toml"))
             }
-            img(src="./assets/robot_edited.webp", class="h-screen snap-start object-center  lg:translate-x-0 lg:snap-align-none lg:absolute inset-0 lg:h-full lg:w-full lg:object-right object-cover", alt="Team 2941H VEX robot on the field.")
+            // eager loading bc this is the title page
+            img(loading="eager", src="./assets/robot_edited.webp", class="h-screen snap-start object-center  lg:translate-x-0 lg:snap-align-none lg:absolute inset-0 lg:h-full lg:w-full lg:object-right object-cover", alt="Team 2941H VEX robot on the field.")
         }
     }
 }

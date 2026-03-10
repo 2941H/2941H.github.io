@@ -12,7 +12,7 @@ pub(crate) fn Donate() -> View {
                 }
             }
             r#box::Box(class="mx-auto mt-8 lg:m-8 lg:absolute lg:right-0 lg:top-1/2 lg:-translate-y-1/2 w-fit h-fit") {
-                iframe(src="https://givealittle.co.nz/widget/light-skyscraper/cause/oats-to-vex-worlds", class="w-70 h-130")
+                iframe(loading="lazy", src="https://givealittle.co.nz/widget/light-skyscraper/cause/oats-to-vex-worlds", class="w-70 h-130")
                 span(class="sr-only") {"give a little"}
                 img(src="./assets/givealittle_logo.webp", class="w-40 mt-8 mx-auto", alt="", aria-hidden="true")
             }

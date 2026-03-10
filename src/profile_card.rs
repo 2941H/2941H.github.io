@@ -26,7 +26,7 @@ pub(crate) fn Profile<'a>(person: Person) -> View {
         r#box::Box(class="block lg:flex") {
             figure(class="mb-4 lg:mb-0 lg:mr-4") {
                 div(class="w-50 w-50 rounded-full overflow-hidden mx-auto") {
-                    img(src=person.photo, class="w-full h-full object-cover")
+                    img(loading="lazy", src=person.photo, class="w-full h-full object-cover")
                 }
                 figcaption(class="text-2xl text-center text-white") {
                     (person.name)

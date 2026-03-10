@@ -6,7 +6,7 @@ use sycamore::prelude::*;
 pub(crate) fn Worlds() -> View {
     view! {
         section::Section(breakpoint="lg") {
-            img(src="./assets/st_louis.webp", class="w-auto absolute inset-0 h-full w-full object-center object-cover", alt="Placeholder image.")
+            img(loading="lazy", src="./assets/st_louis.webp", class="w-auto absolute inset-0 h-full w-full object-center object-cover", alt="Placeholder image.")
             r#box::Box(class="bg-white/30 w-full  rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
                     "We Qualified for the World Championships"

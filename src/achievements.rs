@@ -6,7 +6,7 @@ use sycamore::prelude::*;
 pub(crate) fn Achievements() -> View {
     view! {
         section::Section {
-            img(src="./assets/awards.webp", class="absolute inset-0 h-full w-full object-top object-cover", alt="Placeholder image.")
+            img(loading="lazy", src="./assets/awards.webp", class="absolute inset-0 h-full w-full object-top object-cover", alt="Placeholder image.")
             r#box::Box(class="lg:absolute w-full lg:w-auto lg:top-0 lg:left-0 lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
                     "Achievements"
