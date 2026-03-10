@@ -1,6 +1,7 @@
 use sycamore::prelude::*;
 
 mod about;
+mod achievements;
 mod r#box;
 mod donate;
 mod operation;
@@ -18,6 +19,7 @@ fn App() -> View {
             worlds::Worlds()
             vex::Vex()
             about::About()
+            achievements::Achievements()
             donate::Donate()
             operation::Operation()
         }
