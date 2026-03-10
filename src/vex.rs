@@ -11,7 +11,7 @@ pub(crate) fn Vex() -> View {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
                     "What is "
                     span(class="sr-only") {"vex robotics"}
-                    img(src="./assets/vex_robotics_logo.png", class="h-[1.2em] inline", alt="", aria-hidden="true")
+                    img(src="./assets/vex_robotics_logo.webp", class="h-[1.2em] inline", alt="", aria-hidden="true")
                     "?"
                 }
             }

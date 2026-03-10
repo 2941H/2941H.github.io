@@ -20,7 +20,7 @@ pub(crate) fn About() -> View {
         .into_iter()
         .map(|person| {
             view! {
-                div(class="w-fit p-8") {
+                div(class="w-fit p-8 snap-center") {
                     profile_card::Profile(person=person)
                 }
             }
