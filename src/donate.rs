@@ -28,7 +28,7 @@ pub(crate) fn Donate() -> View {
                 }
                 div(class="relative flex") {
                     div(class="text-white text-3xl whitespace-nowrap") {"Our sponsors:"}
-                    div(class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]") {
+                    div(class="overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)] [-webkit-mask-image:linear-gradient(to_right,transparent,black_20%,black_80%,transparent)]") {
                         div(class="flex w-max animate-sponsor-scroll hover:[animation-play-state:paused]") {
                             img(src="./assets/finn.webp", class="h-12 px-25")
                             img(src="./assets/indie.webp", class="h-12 px-25")
