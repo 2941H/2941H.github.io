@@ -15,7 +15,7 @@ pub(crate) fn Profile<'a>(person: Person) -> View {
         .quote
         .map(|q| {
             view! {
-                div(class="text-xl text-justify text-white") {
+                div(class="text-xl text-justify text-white my-auto") {
                     (q)
                 }
             }
