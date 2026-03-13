@@ -1,3 +1,4 @@
+use crate::about::mk_cards;
 use crate::r#box;
 use crate::profile_card;
 use crate::section;
@@ -8,25 +9,13 @@ struct People {
     people: Vec<profile_card::Person>,
 }
 
-pub fn mk_cards(people: impl Iterator<Item = profile_card::Person>) -> View {
-    people
-        .map(|person| {
-            view! {
-                div(class="w-fit p-8 snap-center") {
-                    profile_card::Profile(person=person)
-                }
-            }
-        })
-        .fold(View::new(), |a, b| view! {(a) (b)})
-}
-
 #[component]
-pub(crate) fn About() -> View {
-    // read people.toml file
+pub(crate) fn Mentors() -> View {
+    // read mentors.toml file
     let people: People =
-        toml::from_str(include_str!("people.toml")).expect("failed to deserialize people.toml");
+        toml::from_str(include_str!("mentors.toml")).expect("failed to deserialize mentors.toml");
 
-    // build cards from the people
+    // build cards from the mentors
     let cards = mk_cards(people.people.into_iter());
 
     view! {
@@ -34,7 +23,7 @@ pub(crate) fn About() -> View {
         section::Section(breakpoint="no-breakpoint") {
             r#box::Box(class="z-1 w-full sticky top-0 lg:w-fit lg:right-auto rounded-tl-none rounded-tr-none rounded-bl-none rounded-br-none lg:rounded-br-lg") {
                 h1(class="text-[11vw] text-center lg:text-left lg:text-7xl font-mono text-white") {
-                    "About Us"
+                    "About Oats Robotics"
                 }
             }
             div(class="flex w-full") {

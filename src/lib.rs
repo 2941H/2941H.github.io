@@ -4,6 +4,7 @@ mod about;
 mod achievements;
 mod r#box;
 mod donate;
+mod mentors;
 mod operation;
 mod profile_card;
 mod section;
@@ -22,6 +23,7 @@ fn App() -> View {
             achievements::Achievements()
             donate::Donate()
             operation::Operation()
+            mentors::Mentors()
         }
     }
 }
